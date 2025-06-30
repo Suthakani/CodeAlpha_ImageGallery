@@ -7,15 +7,23 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
   <div class="gallery-container">
     <h1>Image Gallery</h1>
+
+    <div class="filters">
+      <button onclick="filterGallery('all')">All</button>
+      <button onclick="filterGallery('nature')">Nature</button>
+      <button onclick="filterGallery('city')">City</button>
+    </div>
+
     <div class="gallery">
-      <img src="images/img1.jpg" alt="Image 1" onclick="openLightbox(0)">
-      <img src="images/img2.jpg" alt="Image 2" onclick="openLightbox(1)">
-      <img src="images/img3.jpg" alt="Image 3" onclick="openLightbox(2)">
-      <img src="images/img4.jpg" alt="Image 4" onclick="openLightbox(3)">
-      <img src="images/img5.jpg" alt="Image 5" onclick="openLightbox(4)">
-      <img src="images/img6.jpg" alt="Image 6" onclick="openLightbox(5)">
+      <img src="images/img1.jpg" alt="Image 1" data-category="nature" onclick="openLightbox(0)">
+      <img src="images/img2.jpg" alt="Image 2" data-category="city" onclick="openLightbox(1)">
+      <img src="images/img3.jpg" alt="Image 3" data-category="nature" onclick="openLightbox(2)">
+      <img src="images/img4.jpg" alt="Image 4" data-category="city" onclick="openLightbox(3)">
+      <img src="images/img5.jpg" alt="Image 5" data-category="nature" onclick="openLightbox(4)">
+      <img src="images/img6.jpg" alt="Image 6" data-category="city" onclick="openLightbox(5)">
     </div>
   </div>
 
