@@ -3,11 +3,35 @@ body {
   font-family: Arial, sans-serif;
   background: #f5f5f5;
   color: #333;
+  scroll-behavior: smooth;
 }
 
 .gallery-container {
   text-align: center;
   padding: 30px;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.filters {
+  margin-bottom: 20px;
+}
+
+.filters button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  background-color: #0097a7;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.filters button:hover {
+  background-color: #007c91;
 }
 
 .gallery {
@@ -19,6 +43,8 @@ body {
 
 .gallery img {
   width: 100%;
+  height: 200px;
+  object-fit: cover;
   border-radius: 10px;
   transition: transform 0.3s ease;
   cursor: pointer;
@@ -74,4 +100,4 @@ body {
 
 .lightbox .nav button:hover {
   background: #ffffff40;
-}
+  }
