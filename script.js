@@ -28,3 +28,26 @@ function prevImage() {
   currentIndex = (currentIndex - 1 + images.length) % images.length;
   document.getElementById('lightbox-img').src = images[currentIndex];
 }
+
+// Filter by category
+function filterGallery(category) {
+  const allImages = document.querySelectorAll('.gallery img');
+  allImages.forEach(img => {
+    if (category === 'all' || img.dataset.category === category) {
+      img.style.display = 'block';
+    } else {
+      img.style.display = 'none';
+    }
+  });
+}
+
+// Keyboard navigation
+document.addEventListener('keydown', function (e) {
+  const lightbox = document.getElementById('lightbox');
+  if (lightbox.style.display === 'flex') {
+    if (e.key === 'ArrowRight') nextImage();
+    if (e.key === 'ArrowLeft') prevImage();
+    if (e.key === 'Escape') closeLightbox();
+  }
+});
+      
